@@ -1,0 +1,9 @@
+<div className="flex justify-between border gap-1.5 bg-green-400 py-2.5 px-2 items-center">
+      <div>
+        <Logo />
+      </div>
+      <div className="border fixed top-0 left-0 w-[78%] min-h-screen z-50 bg-yellow-600 px-3 md:static md:w-auto md:min-h-auto translate-x-[-100%]">
+        <NavBar />
+      </div>
+      <div className="hidden md:flex">CTA</div>
+    </div>

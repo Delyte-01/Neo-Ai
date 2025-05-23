@@ -1,5 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sora:wght@100..800&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -41,6 +46,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+   --shadow-nav: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+     --shadow-card: 4px 8px 25px 0 rgba(63, 63, 60, 0.12);
 }
 
 :root {
@@ -76,6 +83,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --font-sora: "Sora", sans-serif;
+  --font-mulish:'Mulish', sans-serif;
 }
 
 .dark {
@@ -110,6 +119,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
 }
 
 @layer base {
@@ -119,4 +129,24 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body {
+  font-family: var(--font-mulish);
+  background-color: #0B0F1A;
+}
+.font-sora{
+  font-family: var(--font-sora);
+}
+Image,
+img{
+  width: 100%;
+  height: 100%;
+  font-style: italic;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-gradient{
+  background: linear-gradient(180deg, #7F41FF 0%, #6979FF 100%)
+;
 }
