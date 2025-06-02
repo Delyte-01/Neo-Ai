@@ -133,7 +133,8 @@
 
 body {
   font-family: var(--font-mulish);
-  background-color: #0B0F1A;
+  background-color: #04070d;
+  color: white;
 }
 .font-sora{
   font-family: var(--font-sora);
@@ -146,7 +147,5 @@ img{
   object-fit: cover;
   object-position: center;
 }
-.hero-gradient{
-  background: linear-gradient(180deg, #7F41FF 0%, #6979FF 100%)
-;
-}
+
+  
