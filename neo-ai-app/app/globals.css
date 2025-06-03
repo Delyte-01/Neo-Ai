@@ -148,4 +148,11 @@ img{
   object-position: center;
 }
 
-  
+@layer utilities {
+  @media (min-width:1280px) {
+    .clip-custom {
+      clip-path: inset(0 0 0 0 round 5% 20% 0 10%);
+    }
+  }
+
+}
