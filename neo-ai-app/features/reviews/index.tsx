@@ -47,7 +47,7 @@ const TestimonialCard = ({
   img: string;
 }) => (
   <Reveal>
-    <div className="bg-white/5  backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-white/10 text-white w-full">
+    <div className="bg-white/5  backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-white/10 text-white w-full" >
       <p className="mb-4">{text}</p>
       <div className="flex gap-2">
         <div className="overflow-hidden rounded-full w-[30px] h-[30px]">
@@ -67,7 +67,7 @@ const TestimonialCard = ({
 
 const ReviewSection = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#8c67cc] via-[#463568] to-[#04070d] px-4 md:px-6 py-16 place-content-center clip-custom">
+    <div className="min-h-screen bg-gradient-to-br from-[#8c67cc] via-[#463568] to-[#04070d] px-4 md:px-6 py-16 place-content-center clip-custom" id='review'>
       <div>
         <RevealGroup>
           <Button className="rounded-full reveal-child flex gap-2 mx-auto font-sora font-normal ring-2 cursor-pointer bg-[#04070e]">

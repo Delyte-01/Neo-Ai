@@ -194,7 +194,7 @@ const PrincingPlansSection = () =>
   };
 
   return (
-    <div className=" min-h-[160vh] lg:min-h-[120vh] px-4 lg:px-40 place-content-center py-12">
+    <div className=" min-h-[160vh] lg:min-h-[120vh] px-4 lg:px-40 place-content-center py-12" id="pricing">
 
       <Reveal>
       <div className="flex flex-col justify-center text-center py-3 mb-2">

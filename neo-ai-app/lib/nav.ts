@@ -5,18 +5,22 @@ type navTypes = {
 export const navbarItems: navTypes = [
   {
     title: "About us",
-    link: "/",
+    link: "/#features",
   },
   {
     title: "Advantages",
-    link: "#features",
+    link: "#benefits",
   },
   {
     title: "Pricing",
-    link: "#how-it-works",
+    link: "/#pricing",
   },
   {
     title: "FAQs",
-    link: "#faqs",
+    link: "/#faq",
+  },
+  {
+    title: "Review",
+    link: "/#review",
   },
 ];

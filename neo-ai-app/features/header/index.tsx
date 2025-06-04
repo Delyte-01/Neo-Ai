@@ -28,6 +28,9 @@ const HeaderSection = () =>
       };
     }, []);
   
+    const handleLinkClick = () => {
+      setIsOpen(false); // close the menu after clicking a link
+    };
   return (
     <section
       className={`fixed left-[50%] -translate-x-[50%] w-[95%] flex justify-between items-center z-30   py-2.5 px-4 transition-all font-sora duration-500  bg-white/5  rounded-4xl backdrop-blur-md   text-white shadow-lg shadow-[#52398a] ${
@@ -74,7 +77,7 @@ const HeaderSection = () =>
           <AlignJustify className="sm:size-7 size-5" />
         )}
       </div>
-      <NavMobile isOpen={isOpen} />
+      <NavMobile isOpen={isOpen} handleLinkClick={handleLinkClick} />
     </section>
   );
 }
@@ -82,29 +85,39 @@ const HeaderSection = () =>
 export default HeaderSection
 interface NavMobileProps {
   isOpen: boolean;
+  handleLinkClick:()=>void;
 }
-const NavMobile = ({ isOpen }: NavMobileProps) => {
+const NavMobile = ({ isOpen, handleLinkClick }: NavMobileProps) => {
   return (
-    <section
-      className="absolute md:hidden flex flex-col items-start justify-start px-2 py-6 top-20 w-full  rounded-[12px] shadow-card transition-all duration-300 "
-      style={{ right: isOpen ? 0 : "-200%" }}
-    >
-      {navbarItems.map((link, index) => (
-        <Link
-          href={link.link}
-          key={index}
-          className="whitespace-nowrap px-5 py-3.5 border-b-[0.5px] border-b-light-grey-02/50 w-full text-base text-white"
-        >
-          {link.title}
-        </Link>
-      ))}
-      <section className="flex flex-col items-start justify-start w-full gap-4">
-        <Link href={"/"}>
-          <Button className="text-sm font-normal text-white bg-primary border border-primary rounded-lg py-2.5 px-4 whitespace-nowrap cursor-pointer">
-            Download Now
-          </Button>
-        </Link>
+    <>
+      <section
+        className="absolute md:hidden flex flex-col items-start justify-start px-2 py-6 top-20 w-full   shadow-nav  bg-gradient-to-br from-[#825ed8] via-[#c994fa] to-[#463568] rounded-4xl backdrop-blur-md shadow-[#52398a] transition-all duration-500 z-40"
+        style={{ right: isOpen ? 0 : "-200%" }}
+      >
+        {navbarItems.map((link, index) => (
+          <Link
+            href={link.link}
+            key={index}
+            className="whitespace-nowrap px-5 py-3.5  w-full text-base text-white"
+            onClick={handleLinkClick}
+          >
+            {link.title}
+          </Link>
+        ))}
+        <section className="flex flex-col items-start justify-start w-full gap-4">
+          <Link href={"/"}>
+            <Button className="text-sm font-normal text-white ml-3 bg-primary border border-primary rounded-lg py-2.5 px-4 whitespace-nowrap cursor-pointer">
+              Download Now
+            </Button>
+          </Link>
+        </section>
       </section>
-    </section>
+      <div
+        className={`fixed -bottom-10 -top-10 -left-10 w-[200vw] min-h-[300vh] md:hidden  bg-black/30 backdrop-blur-md transition-all duration-500 ${
+          isOpen ? "block " : "hidden"
+        }`}
+        onClick={handleLinkClick}
+      ></div>
+    </>
   );
 };

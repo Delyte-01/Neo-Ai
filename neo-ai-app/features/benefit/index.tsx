@@ -6,7 +6,11 @@ import React from 'react'
 
 const BenefitSection = () => {
   return (
-    <div className="min-h-[800px] px-4 lg:px-46 text-white py-7 flex items-center 2xl:px-50 ">
+    
+    <div
+      className="min-h-[800px] px-4 lg:px-46 text-white py-7 flex items-center 2xl:px-50 "
+      id="benefits"
+    >
       <div>
         <SlideUp>
           <Button className="rounded-full flex gap-2 mx-auto font-sora font-normal bg-transparent ring-2  ">
@@ -25,7 +29,7 @@ const BenefitSection = () => {
         </SlideUp>
 
         {/* <RevealGroup> */}
-        <div className="flex flex-col  gap-4 px-9 py-4 md:flex-row">
+        <div className="flex flex-col  gap-4 px-5 py-4 md:flex-row">
           <div className="flex flex-col gap-3 flex-1">
             <Reveal>
               <div className="relative rounded-2xl overflow-clip shadow-sm shadow-[#2f3338] ">
@@ -70,33 +74,32 @@ const BenefitSection = () => {
             </Reveal>
           </div>
 
-          
-            <div className=" h-[460px]  relative flex shadow-sm shadow-[#2f3338] rounded-2xl overflow-clip justify-center flex-1  ">
-              <div className="absolute inset-0  w-full   bg-gradient-to-b  from-[#05090e] via-[#221b36] to-[#503d7a]  "></div>
-              <div className="relative z-10 h-[80%] md:h-auto  self-end">
-                <img
-                  src="https://res.cloudinary.com/dk5mfu099/image/upload/v1747748990/gpt-phone-2-removebg-preview_h6eki2.png"
-                  alt="statistical analysis"
-                />
-              </div>
+          <div className=" h-[460px]  relative flex shadow-sm shadow-[#2f3338] rounded-2xl overflow-clip justify-center flex-1  ">
+            <div className="absolute inset-0  w-full   bg-gradient-to-b  from-[#05090e] via-[#221b36] to-[#503d7a]  "></div>
+            <div className="relative z-10 h-[80%] md:h-auto  self-end">
+              <img
+                src="https://res.cloudinary.com/dk5mfu099/image/upload/v1747748990/gpt-phone-2-removebg-preview_h6eki2.png"
+                alt="statistical analysis"
+              />
             </div>
-     
-            <div className="h-[460px]  relative rounded-2xl overflow-hidden shadow-sm shadow-[#2f3338] flex-1">
-              <div className="absolute inset-0  w-full   bg-gradient-to-b  from-[#05090e] via-[#221b36] to-[#503d7a]  "></div>
-              <div className="relative z-10 ">
-                <div className="p-5 flex flex-col gap-2">
-                  <h2 className="font-sora text-2xl ">Voice control</h2>
-                  <p className="opacity-80">
-                    NeoAI instantly processes requests,places orders, books
-                    tickets, and arrange deliveries, helping you save time
-                  </p>
-                </div>
-                <img
-                  src="https://res.cloudinary.com/dk5mfu099/image/upload/v1747925337/ChatGPT_Image_May_22_2025_02_48_34_PM_vhg0ke.png"
-                  alt="Custom Mic"
-                />
+          </div>
+
+          <div className="h-[460px]  relative rounded-2xl overflow-hidden shadow-sm shadow-[#2f3338] flex-1">
+            <div className="absolute inset-0  w-full   bg-gradient-to-b  from-[#05090e] via-[#221b36] to-[#503d7a]  "></div>
+            <div className="relative z-10 ">
+              <div className="p-5 flex flex-col gap-2">
+                <h2 className="font-sora text-2xl ">Voice control</h2>
+                <p className="opacity-80">
+                  NeoAI instantly processes requests,places orders, books
+                  tickets, and arrange deliveries, helping you save time
+                </p>
               </div>
+              <img
+                src="https://res.cloudinary.com/dk5mfu099/image/upload/v1747925337/ChatGPT_Image_May_22_2025_02_48_34_PM_vhg0ke.png"
+                alt="Custom Mic"
+              />
             </div>
+          </div>
         </div>
         {/* </RevealGroup> */}
       </div>

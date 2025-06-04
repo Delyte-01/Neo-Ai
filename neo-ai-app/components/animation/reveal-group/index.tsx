@@ -42,9 +42,13 @@ export default function RevealGroup({
         scrollTrigger: {
           trigger: groupRef.current,
           start: triggerStart,
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none reset",
         },
       });
+      // ✅ Refresh ScrollTrigger after short delay to fix mobile quirks
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 150);
     },
     { scope: groupRef }
   );

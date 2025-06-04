@@ -73,7 +73,7 @@ const FAQItem = ({
 
 const FAQSection = () => {
   return (
-    <div className="min-h-screen  px-4 py-16 place-content-center">
+    <div className="min-h-screen  px-4 py-16 place-content-center" id='faq'>
       <RevealGroup>
         <Button className="rounded-full reveal-child flex gap-2 mx-auto font-sora font-normal bg-transparent ring-2 mb-2">
           <div className="w-[25px]">

@@ -46,7 +46,7 @@ const features: feature[] = [
 
 const FeaturesSection = () => {
   return (
-    <div className=" min-h-[120vh] lg:min-h-[100vh] py-9  place-content-center">
+    <div className=" min-h-[120vh] lg:min-h-[100vh] py-9  place-content-center" id='features'>
       <FadeIn>
         <Button className="rounded-full flex gap-2 mx-auto font-sora font-normal bg-transparent ring-2">
           <div className="w-[25px]">

@@ -6,6 +6,7 @@ import {
   AppleIcon,
   StoreIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -17,50 +18,76 @@ export default function Footer() {
             Intelligent solutions for effortless <br /> shopping, delivery, and
             travel planning.
           </h3>
+          <div className="flex gap-3 items-center">
+            <p>contact us :</p>
+            <span>08139760048</span>
+          </div>
+
           <p className="mt-4 mb-2 font-medium">Follow Us</p>
+
           <div className="flex gap-4 mt-2">
-            <a
+            <Link
               href="#"
               className="hover:text-gray-400 rounded-full border p-1 "
             >
               <FacebookIcon className="h-5 w-5" />
-            </a>
-            <a href="#" className="hover:text-gray-400 rounded-full border p-1">
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-gray-400 rounded-full border p-1"
+            >
               <InstagramIcon className="h-5 w-5" />
-            </a>
-            <a href="#" className="hover:text-gray-400 rounded-full border p-1">
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-gray-400 rounded-full border p-1"
+            >
               <TwitterIcon className="h-5 w-5" />
-            </a>
-            <a href="#" className="hover:text-gray-400 rounded-full border p-1">
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-gray-400 rounded-full border p-1"
+            >
               <LinkedinIcon className="h-5 w-5" />
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Center */}
-        <div className="space-y-2  flex  md:justify-center ">
-          <ul className="space-y-1">
+        <div className="space-y-2  flex  md:justify-center flex-col ">
+          <ul className="space-y-1 text-sm">
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <Link href="#features" className="hover:text-gray-300">
                 About us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <Link href="#benefits" className="hover:text-gray-300">
                 Advantages
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <Link href="#pricing" className="hover:text-gray-300">
                 Pricing
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <Link href="#faq" className="hover:text-gray-300">
                 FAQ
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#review" className="hover:text-gray-300">
+                Review
+              </Link>
             </li>
           </ul>
+          <p className="text-sm text-gray-300 font-sora">
+            Crafted with precision and passion by <strong>DelyteTech💡</strong>.
+            Delivering sleek, responsive, and intelligent web experiences
+            powered by GSAP, Next.js, and Tailwind CSS. <br />
+            &copy; {new Date().getFullYear()} All rights reserved.
+          </p>
         </div>
 
         {/* Right */}
@@ -71,17 +98,21 @@ export default function Footer() {
             App Store and Google Play.
           </p>
           <div className="flex flex-wrap gap-3 ">
-            <a
-              href="#"
+            <Link
+              href={
+                "https://www.bing.com/search?q=apple%20store%20download&qs=n&form=QBRE&sp=-1&ghc=2&lq=0&pq=apple%20store%20download&sc=12-20&sk=&cvid=604832AC0F35459EABE3948E155B61F6"
+              }
               className="flex items-center gap-2  rounded-md px-3 py-2 h-17 w-45 bg-white"
             >
               <img
                 src="https://res.cloudinary.com/dk5mfu099/image/upload/v1748941307/apple_1-removebg-preview_nfkiqr.png"
                 alt=""
               />
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href={
+                "https://www.bing.com/search?qs=AS&pq=google+play+&sk=CSYN1&sc=15-12&pglt=41&q=google+play+store&cvid=332718646cb749739c95d2068a00b2aa&gs_lcrp=EgRlZGdlKgYIARAAGEAyBggAEEUYOTIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQLhhAMgYIBRAuGEAyBggGEAAYQDIGCAcQABhAMgYICBBFGDzSAQkxNTU2MWowajGoAgCwAgA&FORM=ANNTA1&PC=U531"
+              }
               className="flex items-center gap-2  rounded-md px-3 py-2 bg-white h-17 w-45"
             >
               <img
@@ -89,7 +120,7 @@ export default function Footer() {
                 alt=""
                 className=""
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

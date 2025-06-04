@@ -2,6 +2,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
+import LoadingScreen from "@/components/animation/loading-screen";
+import BackToTop from "@/components/back-to-top";
 
 
 
@@ -20,11 +22,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  
 
   return (
     <html lang="en">
-      <body className="font-mulish">
-        <SmoothScroll>{children}</SmoothScroll>
+      <body className="font-mulish ">
+        <SmoothScroll>
+          {children}
+          <BackToTop />
+        </SmoothScroll>
       </body>
     </html>
   );
